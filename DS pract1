@@ -1,0 +1,59 @@
+A=[] #cricket
+B=[] #badminton
+C=[] #football
+
+n=int(input("No. of students play cricket:"))
+for i in range(0,n):
+    A.append(int(input("Roll_no :")))
+n=int(input("No. of students play badminton:"))
+for i in range(0,n):
+    B.append(int(input("Roll_no :")))
+n=int(input("No. of students play football:"))
+for i in range(0,n):
+    C.append(int(input("Roll_no :")))
+    
+print("cricket:",A)
+print("Badminton:",B)
+print("Football:",C)
+    
+#students play cricket and badminton both
+l1=[]
+for i in A:
+    if i in B:
+        l1.append(i)
+print("both cricket and badminton :",l1)
+
+#play either cricket or badminton not both
+l2=[]
+for i in A:
+    if i not in l1:
+        l2.append(i)
+for i in B:
+    if i not in l1:
+        l2.append(i)
+print("Either cricket or badminton not both:",l2)
+
+#no of students play niether cricket nor badminton
+c=0
+for i in C:
+    if i not in A and i not in B:
+        c+=1
+print("niether badminton nor cricket:",c)
+
+#no of students who play cricket and football not badminton
+d=0
+l3=[]
+for i in A:
+    if i in C and i not in B:
+        d+=1
+print("no of students play cricket and football not badminton:",d)
+
+
+
+
+
+    
+
+
+
+    
